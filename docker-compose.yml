@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+  wordpress:
+    container_name: wordpress-app
+    build: docker/wordpress
+    environment:
+      - TZ=Asia/Jakarta
+    ports:
+      - 80:80
+    volumes:
+      - wordpress:/var/www/html
+
+  databases:
+    container_name: wordpress-db
+    build : docker/mysql
+    environment:
+      - TZ=Asia/Jakarta
+    volumes:
+      - db:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+volumes:
+  wordpress:
+  db:
