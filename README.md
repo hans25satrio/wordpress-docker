@@ -1,4 +1,4 @@
-# Hans Shopee's Test
+# Hans Wordpress Docker
 
 This is the simple Wordpress APP.
 
